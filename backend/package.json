@@ -1,0 +1,47 @@
+{
+  "name": "sistema-escolar-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "migrate": "sequelize db:migrate",
+    "seed": "sequelize db:seed:all",
+    "rollback": "sequelize db:migrate:undo",
+    "lint": "eslint . --fix",
+    "build": "tsc",
+    "test": "cross-env NODE_ENV=test jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.2",
+    "mysql2": "^3.14.0",
+    "sequelize": "^6.37.7",
+    "supabase": "^2.20.5",
+    "winston": "^3.17.0",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.6.2",
+    "supertest": "^7.1.0"
+  }
+}
