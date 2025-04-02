@@ -1,8 +1,11 @@
 // routes/paymentRoutes.js
 const express = require('express');
-const paymentController = require('../controllers/paymentController');
+
 const authMiddleware = require('../middlewares/authMiddleware');
 const roleMiddleware = require('../middlewares/roleMiddleware');
+const paymentController = require('../controllers/paymentController');
+const courseController = require('../controllers/courseController');
+
 
 const router = express.Router();
 // Apenas usuários autenticados com role 'admin' podem criar cursos

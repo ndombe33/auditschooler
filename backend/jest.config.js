@@ -1,4 +1,5 @@
 module.exports = {
+    setupFiles: ["dotenv/config"],  // 🔹 Isso garante que o Jest carregue as variáveis do .env
     testEnvironment: "node",                   // Ambiente de teste para Node.js
     collectCoverage: true,                     // Habilita a coleta de cobertura de código
     coverageDirectory: "coverage",             // Diretório onde os relatórios de cobertura serão armazenados

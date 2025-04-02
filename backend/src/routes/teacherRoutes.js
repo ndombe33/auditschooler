@@ -1,8 +1,11 @@
 // routes/teacherRoutes.js
 const express = require('express');
-const teacherController = require('../controllers/teacherController');
+
 const authMiddleware = require('../middlewares/authMiddleware');
 const roleMiddleware = require('../middlewares/roleMiddleware');
+const teacherController = require('../controllers/teacherController');
+const courseController = require('../controllers/courseController'); 
+
 const router = express.Router();
 // Apenas usuários autenticados com role 'admin' podem criar cursos
 router.post('/', authMiddleware, roleMiddleware('admin'), courseController.createCourse);

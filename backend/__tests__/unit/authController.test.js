@@ -1,5 +1,5 @@
 const { register } = require('../../src/controllers/authController');
-const User = require('../../src/models/user'); // Ajustado para minúsculas
+const User = require('../src/models/user'); // Ajustado para minúsculas
 
 jest.mock('../../src/models/user'); // Simula a model User
 

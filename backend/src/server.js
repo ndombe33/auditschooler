@@ -13,24 +13,22 @@ const sanitizeInputs = require('./middlewares/sanitization');
 const { requestLogger } = require('./middlewares/logger');
 
 // Importação de Middlewares Globais
-const errorHandler = require('./src/middlewares/errorHandler');
+const errorHandler = require('./middlewares/errorHandler');
 
 // Importação de Rotas
 const authRoutes = require("./routes/authRoutes");
-const courseRoutes = require('./src/routes/courseRoutes');
-const userRoutes = require('./src/routes/userRoutes');
-const teacherRoutes = require('./src/routes/teacherRoutes');
-const studentRoutes = require('./src/routes/studentRoutes');
-const subjectRoutes = require('./src/routes/subjectRoutes');
-const classRoutes = require('./src/routes/classRoutes');
-const attendanceRoutes = require('./src/routes/attendanceRoutes');
-const gradeRoutes = require('./src/routes/gradeRoutes');
-const paymentRoutes = require('./src/routes/paymentRoutes');
-const enrollmentRoutes = require('./src/routes/enrollmentRoutes');
-const errorHandler = require('./middlewares/errorHandler');
-const errorHandler = require('./src/middlewares/errorHandler');
-const permissionRoutes = require('./src/routes/permissionRoutes');
-const settingRoutes = require('./src/routes/settingRoutes');
+const courseRoutes = require('./routes/courseRoutes');
+const userRoutes = require('./routes/userRoutes');
+const teacherRoutes = require('./routes/teacherRoutes');
+const studentRoutes = require('./routes/studentRoutes');
+const subjectRoutes = require('./routes/subjectRoutes');
+const classRoutes = require('./routes/classRoutes');
+const attendanceRoutes = require('./routes/attendanceRoutes');
+const gradeRoutes = require('./routes/gradeRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
+const enrollmentRoutes = require('./routes/enrollmentRoutes');
+const permissionRoutes = require('./routes/permissionRoutes');
+const settingRoutes = require('./routes/settingRoutes');
 
 // Inicializa o App Express
 const app = express();
@@ -66,7 +64,7 @@ app.use('/permissions', permissionRoutes);
 app.use('/settings', settingRoutes);
 
 // 🔹 6️⃣ Rota Padrão
-app.get('/', (req, res) => res.send('API Rodando com Segurança 🚀'));
+app.get('/', (_req, res) => res.send('API Rodando com Segurança 🚀'));
 
 // 🔹 7️⃣ Middleware Global de Tratamento de Erros (Sempre no Final)
 app.use(errorHandler);

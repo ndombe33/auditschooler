@@ -1,8 +1,10 @@
 // routes/attendanceRoutes.js
 const express = require('express');
-const attendanceController = require('../controllers/attendanceController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const roleMiddleware = require('../middlewares/roleMiddleware');
+const attendanceController = require('../controllers/attendanceController');
+const courseController = require('../controllers/courseController');
+
 
 const router = express.Router();
 
